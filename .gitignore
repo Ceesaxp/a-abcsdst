@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# work dirs
+mp3/
+book/
+covers/
+
+# OS specific dirs and files
+.DS_Store
+
+*.mp3

@@ -1,0 +1,27 @@
+[project]
+name = "a-abcdst"
+version = "0.1.0"
+description = "Automated Audiobook Chapter Detection and Segmentation Tool"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = []
+keywords = ["audiobook", "chapters", "mp3", "vosk", "speech-recognition", "audio-processing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion"
+]
+dependencies = [
+    "vosk>=0.3.42",
+    "mutagen>=1.46.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0"
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
