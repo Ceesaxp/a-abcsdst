@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AATAOMM is a Python tool for automatically detecting chapters in audiobooks and creating tagged MP3 files. The system uses Vosk speech recognition with phrase-only grammar to detect chapter markers, applies silence gating to reduce false positives, and outputs properly tagged MP3 files with optional M4B creation.
+A-ABCDST is a Python tool for automatically detecting chapters in audiobooks and creating tagged MP3 files. The system uses Vosk speech recognition with phrase-only grammar to detect chapter markers, applies silence gating to reduce false positives, and outputs properly tagged MP3 files with optional M4B creation.
 
 ## Architecture
 
@@ -57,8 +57,8 @@ python3 main.py \
 # Example with all common options
 python3 main.py \
   --model-path /models/vosk-model-small-en-us-0.15 \
-  --album "Zen and the Art of Motorcycle Maintenance" \
-  --artist "Robert M. Pirsig (read by Michael Kramer)" \
+  --album "Book Title" \
+  --artist "Author Name (read by Narator Name)" \
   --year "1974" \
   --min-chapter-gap 90 \
   --min-chapter-duration 180 \
