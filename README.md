@@ -2,7 +2,9 @@
 
 A-ABCDST is a Python tool for automatically detecting chapters in audiobooks and creating properly tagged MP3 files with optional M4B creation. The system uses Vosk speech recognition with phrase-only grammar to detect chapter markers, applies silence gating to reduce false positives, and outputs properly tagged MP3 files.
 
-## Features
+> 💡 So — you've found a bunch of tape cassettes or CDs with the audiobooks you used to listen to way before Audible. You ripped them into MP3s. But they are just blobs of sound a few hours long. You need to get them into _some kind of order_ for real listening pleasure: add cover art, tag with chapter marks, compile into an actual audiobook to use with a mobile device. That's what A-ABCDST does.
+
+## 📋 Features
 
 - **Automatic Chapter Detection**: Uses Vosk speech recognition with phrase-only grammar
 - **Multi-language Support**: English and Russian chapter detection
@@ -15,7 +17,7 @@ A-ABCDST is a Python tool for automatically detecting chapters in audiobooks and
 - **Back Matter Detection**: Supports detection of epilogues and appendices
 - **Custom Phrase Support**: Ability to use custom chapter detection phrases
 
-## System Requirements
+## 💻 System Requirements
 
 ### Required System Binaries
 - **Python 3.12+**
@@ -31,7 +33,7 @@ A-ABCDST is a Python tool for automatically detecting chapters in audiobooks and
 
 ... or any other language Vosk supports.
 
-## Installation
+## 🗜️ Installation
 
 1. Clone the repository:
 ```bash
@@ -50,7 +52,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -e .
 ```
 
-## Python Dependencies
+## 🐍 Python Dependencies
 
 The following Python packages are required (automatically installed with `pip install -e .`):
 
@@ -59,7 +61,7 @@ The following Python packages are required (automatically installed with `pip in
 - **requests** (>=2.31.0): HTTP client for downloading audio files
 - **beautifulsoup4** (>=4.12.0): HTML parsing for the web scraper utility
 
-## Project Structure
+## ⛩️ Project Structure
 
 ```
 AATAOMM/
@@ -72,7 +74,7 @@ AATAOMM/
   README.md           # This file
 ```
 
-## Usage
+## 🏃‍♂ Usage
 
 ### Basic Usage
 
@@ -127,7 +129,7 @@ Download MP3s from supported audiobook websites:
 python3 get_mp3s.py
 ```
 
-## Command Line Options
+## 📺 Command Line Options
 
 ### Required Arguments
 - `--album`: Album/book title for metadata
@@ -169,7 +171,7 @@ python3 get_mp3s.py
 - `--back-trigger TEXT`: Phrase marking start of back matter (e.g., "this concludes")
 - `--m4b-only PATH`: Skip detection, create M4B from existing MP3s
 
-## How It Works
+## 🕵🏻‍♂️ How It Works
 
 1. **Audio Preparation**: Concatenates all MP3s into a single file for analysis
 2. **Silence Map Generation**: Uses ffmpeg to detect silence patterns throughout the audio
@@ -180,7 +182,7 @@ python3 get_mp3s.py
 7. **Metadata Tagging**: Adds ID3 tags with album, artist, track numbers, and cover art
 8. **M4B Creation**: Optionally creates audiobook format with embedded chapter markers
 
-## Supported Chapter Formats
+## 🎩 Supported Chapter Formats
 
 ### English
 - Cardinal numbers: "chapter one", "chapter two", etc.
@@ -204,7 +206,7 @@ python3 get_mp3s.py
 - Back matter: `XX_back_matter.mp3`
 - M4B file: `{Album Title}.m4b`
 
-## Configuration Tips
+## ✅ Configuration Tips
 
 ### Silence Threshold Tuning
 - Start with default `-38dB` threshold
@@ -222,7 +224,7 @@ python3 get_mp3s.py
 - Lower values detect more chapters but may increase false positives
 - Higher values reduce false positives but may miss valid chapters
 
-## Troubleshooting
+## 😵‍💫 Troubleshooting
 
 ### Common Issues
 
@@ -253,7 +255,7 @@ The tool provides verbose output showing:
 - Filtering results at each stage
 - Final segment boundaries
 
-## License
+## 🪪 License
 
 MIT License - see LICENSE file for details.
 
